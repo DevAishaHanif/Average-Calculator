@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS TASK-1</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+
+<body>
+    <div class="Wrapper">
+     <div class="container">
+        <div class="BGimg">
+          <h1 class="head1"><i> AVERAGE CALCULATOR </i></h1> 
+            <form onsubmit="calculate();  return false;" class="FORM">
+             <table>
+              <p>
+               <tr>
+                <td><label>GENERAL SCIENCE :</label></td>
+                <td><input type="number" min="1" value="" id="marks1" required /></td>
+            </tr>
+           </p>
+              <p>
+                <tr>
+                 <td><label>ENG. LITERATURE :</label></td>
+                 <td><input type="number" min="1" value="" id="marks2" required /></td>
+              </tr>
+             </p>
+               <p>
+                <tr>
+                  <td><label>SOCIAL STUDIES :</label></td>
+                   <td><input type="number" min="1" value="" id="marks3" required /></td>
+                </tr>
+             </p>
+                <p>
+                <tr>
+                 <td><label>MATHEMATICS :</label></td>
+                 <td><input type="number" min="1" value="" id="marks4" required /></td>
+              </tr>
+            </p>
+              <p>
+                <tr>
+                 <td><label>ISLAMIAT :</label></td>
+                 <td><input type="number" min="1" value="" id="marks5" required /></td>
+                </tr>
+              </p>
+                <p>
+                <tr>
+                <td><label>URDU :</label></td>
+                <td><input type="number" min="1" value="" id="marks6" required /></td>
+            </tr>
+          </p>
+            <p>
+             <tr>
+               <td><label>HISTORY :</label></td>
+               <td><input type="number" min="1" value="" id="marks7" required /></td>
+           </tr>
+          </p>
+            <p>
+             <tr>
+               <td><label>ART & CRAFT :</label></td>
+               <td><input type="number" min="1" value="" id="marks8" required /></td>
+            </tr>
+          </p>
+             <p>
+               <tr>
+                 <td><label>ENG. LANGUAGE :</label></td>
+                 <td><input type="number" min="1" value="" id="marks9" required /></td>
+              </tr>
+             </p>
+                 <p>
+                   <tr>
+                     <td><label> PHYSICS :</label></td>
+                     <td><input type="number" min="1" value="" id="marks10" required/></td>
+                </tr>
+              </p>
+         </table>
+                <p>
+                <button type="submit" class="btn"><i>CALCULATE YOUR TOTAL MARKS & AVERAGE HERE !</i></button>
+            </p>
+        </form>
+            <h2 id="total"></h2>
+            <h2 id="average"></h2>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    function calculate() {
+     let totalsubjects = 10;
+     let marks1 = parseInt(document.querySelector("#marks1").value);
+     let marks2 = parseInt(document.querySelector("#marks2").value);
+     let marks3 = parseInt(document.querySelector("#marks3").value);           
+     let marks4 = parseInt(document.querySelector("#marks4").value);
+     let marks5 = parseInt(document.querySelector("#marks5").value);
+     let marks6 = parseInt(document.querySelector("#marks6").value);
+     let marks7 = parseInt(document.querySelector("#marks7").value);
+     let marks8 = parseInt(document.querySelector("#marks8").value);
+     let marks9 = parseInt(document.querySelector("#marks9").value);
+     let marks10 = parseInt(document.querySelector("#marks10").value);
+
+     let Result = (marks1 + marks2 + marks3 + marks4 + marks5 + marks6 + marks7 + marks8 + marks9 + marks10);
+     document.querySelector("#total").innerHTML = ` Your Total Marks  is ${Result} .. `;
+
+     let result = (marks1 + marks2 + marks3 + marks4 + marks5 + marks6 + marks7 + marks8 + marks9 + marks10) / totalsubjects;
+    document.querySelector("#average").innerHTML = ` Your Average  is ${result} ..`;
+        }
+
+  </script>
+
+ </body>
+
+</html>
